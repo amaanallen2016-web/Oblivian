@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Oblivian OS V2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline loader styles to keep the new loading screen self-contained */
+    .oblivian-loader-wrap { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; }
+    .oblivian-mark svg{ width:84px; height:84px; display:block; }
+    .boot-logo { font-family: 'Orbitron', system-ui, sans-serif; letter-spacing:2px; font-size:34px; margin:0; color:#f5f7fb; }
+    .boot-sub { margin:0; color:rgba(245,247,251,0.8); }
+    .loader-dots { display:flex; gap:12px; }
+    .loader-dots span { width:12px; height:12px; background:linear-gradient(90deg,#7f5af0,#ff7ab6); border-radius:50%; display:inline-block; animation:obl-bounce 1s infinite ease-in-out; }
+    .loader-dots span:nth-child(2){ animation-delay:0.15s }
+    .loader-dots span:nth-child(3){ animation-delay:0.3s }
+    @keyframes obl-bounce { 0%,80%,100% { transform: translateY(0); opacity:0.6 } 40% { transform: translateY(-12px); opacity:1 } }
+    #boot-layer { background: radial-gradient(ellipse at center, #0f1724 0%, #071021 70%); color:#e6eef8; padding:48px 24px; }
+    #boot-content { max-width:720px; margin:0 auto; text-align:center; }
+    #boot-btn { margin-top:14px; background:transparent; border:1px solid rgba(255,255,255,0.12); color:#fff; padding:10px 18px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); }
+    .boot__hint { margin-top:10px; color:rgba(230,238,248,0.6); font-size:13px }
+    /* subtle animated glow behind logo */
+    .oblivian-mark { filter: drop-shadow(0 8px 24px rgba(127,90,240,0.18)); }
+  </style>
+</head>
+
+<body id="desktop-area" role="application">
+
+<!-- accessibility wrapper for screen readers -->
+<div id="fps-counter" aria-live="polite"><span id="fps-val">60</span> FPS</div>
+
+<dialog id="mobile-warning" aria-modal="true">
+  <div class="mobile-box">
+    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    <h2>Device is not fully supported</h2>
+    <p>Double tap anywhere to continue</p>
+  </div>
+</dialog>
+
+<div id="top-trigger" aria-hidden="true"></div>
+<div id="bottom-trigger" aria-hidden="true"></div>
+
+<section id="boot-layer" aria-label="System Boot Sequence">
+  <div id="boot-content" class="oblivian-loader-wrap">
+    <!-- New Oblivian animated mark (SVG with simple animation) -->
+    <div class="oblivian-mark" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oblivian logo">
+        <defs>
+          <linearGradient id="g1" x1="0%" x2="100%">
+            <stop offset="0%" stop-color="#7f5af0"/>
+            <stop offset="100%" stop-color="#ff7ab6"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="50" cy="50" r="32" opacity="0.12"/>
+          <path d="M30 50a20 20 0 0 0 40 0" stroke-opacity="0.95">
+            <animate attributeName="stroke-dashoffset" from="0" to="200" dur="2.2s" repeatCount="indefinite" />
+          </path>
+          <circle cx="50" cy="50" r="6" fill="url(#g1)">
+            <animate attributeName="r" values="6;10;6" dur="1.6s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      </svg>
+    </div>
+
+    <h1 class="boot-logo">OBLIVIAN</h1>
+    <p class="boot-sub">Reimagined — Oblivian OS V2</p>
+
+    <div class="loader-dots" role="status" aria-live="polite">
+      <span></span><span></span><span></span>
+    </div>
+
+    <button id="boot-btn" onclick="startBootSequence()" tabindex="1">Enter OBLIVIAN</button>
+    <div class="boot__hint">Double-Tap ENTER to skip sequence</div>
+  </div>
+</section>
+
+<main id="lock-screen" onclick="unlockSystem()" role="presentation">
+  <video id="lock-video" autoplay loop muted playsinline aria-hidden="true"></video>
+  <img id="lock-img" class="media__fallback" alt="Lockscreen Background">
+  
+ <article id="lock-ui">
+    <div class="lock-content">
+      <div class="l-day" id="lock-day-large">FRIDAY</div>
+      <div class="l-date" id="lock-date">03 APRIL, 2026.</div>
+      <div class="l-time" id="lock-time">- 08:43 -</div>
+    </div>
+  </article>
+</main>
+
+<!-- Base OS Backgrounds -->
+<video id="bg-video" loop muted playsinline aria-hidden="true"></video>
+<img id="bg-img" class="media__fallback" alt="Desktop Background">
+<canvas id="snow-fx" aria-hidden="true"></canvas>
+
+<header id="hud-top">
+  <div class="hud-day" id="lbl-day">FRIDAY</div>
+</header>
+
+<!-- Right Sidebar refactored with BEM and Semantic tags -->
+<aside id="right-sidebar" aria-label="Quick Access Widget">
+  <section class="sidebar__section">
+    <h3 class="sidebar__title">Jump Back In!</h3>
+    <div class="sidebar__card" id="last-played-game" onclick="launchLastPlayed()" role="button" tabindex="0">
+      <img id="last-game-icon" src="https://cdn-icons-png.flaticon.com/512/732/732244.png" alt="Game Icon">
+      <div class="sidebar__info">
+        <strong id="last-game-name">No Recent Game</strong>
+        <small>PS5 Emu</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="sidebar__section">
+    <h3 class="sidebar__title">Quick Play</h3>
+    <div class="sidebar__card" id="spotify-quick-play" onclick="resumeSpotify()" role="button" tabindex="0">
+      <img id="spotify-album-art" src="https://cdn.pixabay.com/photo/2016/10/22/00/15/spotify-1759471_1280.jpg" alt="Album Cover">
+      <div class="sidebar__info">
+        <strong id="spotify-track-name">Not Playing</strong>
+        <small>Oblivian Music</small>
+      </div>
+      <i class="fas fa-play play-overlay" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <section class="sidebar__section">
+    <h3 class="sidebar__title">System Status</h3>
+    <div class="sidebar__card update-card" onclick="openUpdateLog()" role="button" tabindex="0">
+      <div class="sidebar__info">
+        <strong class="txt-highlight">Update Log</strong>
+        <small>View latest patches</small>
+      </div>
+      <i class="fas fa-chevron-right sidebar__chevron" aria-hidden="true"></i>
+    </div>
+  </section>
+</aside>],
