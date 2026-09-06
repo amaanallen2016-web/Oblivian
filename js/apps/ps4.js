@@ -1,12 +1,13 @@
 /* OBLIVIAN OS - PS4 Emulator
-   All code created by: amaanallen2016-web */
+   CREATED BY: amaanallen2016-web
+   ALL CODE BELONGS TO: amaanallen2016-web */
 
 const PS4App = {
     open: function() {
         const content = `
             <div style="text-align: center;">
                 <h2 style="color: #ff00ff;">🎮 PS4 Emulator</h2>
-                <p>Based on: amaanallen2016-web Ps4-sdk fork</p>
+                <p>CREATED BY: amaanallen2016-web</p>
                 
                 <div style="margin: 20px 0; padding: 20px; background: rgba(102, 0, 204, 0.2); border-radius: 8px;">
                     <p>PS4 Emulation Status: <span style="color: #00ff88;">✓ Ready</span></p>
@@ -19,7 +20,7 @@ const PS4App = {
                     <button onclick="PS4App.launchGame('Elden Ring')">Elden Ring</button>
                 </div>
                 
-                <p style="margin-top: 15px; font-size: 0.9em;">Created by: amaanallen2016-web</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">Created by: amaanallen2016-web - ALL CODE ORIGINAL</p>
             </div>
         `;
         os.createWindow('🎮 PS4 Emulator', content, 600, 400);
