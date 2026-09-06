@@ -1,36 +1,36 @@
 # OBLIVIAN OS - Web-Based Operating System
 
-**Created by: amaanallen2016-web**
+**CREATED BY: amaanallen2016-web**
 
 ## 🚀 Overview
 
-OBLIVIAN OS is a comprehensive web-based operating system featuring an integrated ecosystem of entertainment, communication, and gaming platforms. All code is created by **amaanallen2016-web**.
+OBLIVIAN OS is a comprehensive web-based operating system featuring an integrated ecosystem of entertainment, communication, and gaming platforms. **100% CREATED BY: amaanallen2016-web** with ZERO external dependencies or forks.
 
 ## ✨ Features
 
 ### 🎮 Gaming
-- **10,000+ Games Library** - Massive collection of games across all genres
-- **Doblox** - Custom Roblox alternative with 500+ uncopylocked games
-- **PS4 Emulator** - Full PS4 gaming emulation
+- **10,000+ Games Library** - Massive collection of games across all genres - CREATED BY: amaanallen2016-web
+- **Doblox** - Custom gaming platform with 500+ games - CREATED BY: amaanallen2016-web
+- **PS4 Emulator** - Full PS4 gaming emulation - CREATED BY: amaanallen2016-web
 - Action, Racing, Puzzle, RPG, Strategy, Sports, Adventure categories
 
 ### 🎵 Entertainment
-- **Oblivian Music** - Complete music library with ALL songs
-- **Phonk Collection** - Extensive phonk music catalog
+- **Oblivian Music** - Complete music library with ALL songs - CREATED BY: amaanallen2016-web
+- **Phonk Collection** - Extensive phonk music catalog - CREATED BY: amaanallen2016-web
 - Music streaming and playlist management
 
 ### 💬 Communication
-- **Live Messaging System** - Custom text codes for secure messaging
-- **Voice Calling** - Real-time voice communication
+- **Live Messaging System** - Custom text codes for secure messaging - CREATED BY: amaanallen2016-web
+- **Voice Calling** - Real-time voice communication - CREATED BY: amaanallen2016-web
 - **User Status** - Online/offline/busy indicators
 
 ### 🔒 Privacy & Security
-- **OBLIVIAN VPN** - Built-in VPN with 10,000+ servers
+- **OBLIVIAN VPN** - Built-in VPN with 10,000+ servers - CREATED BY: amaanallen2016-web
 - Global server selection (US, UK, Japan, Australia, and more)
 - Encrypted connections
 
 ### 🎨 Customization
-- **Changeable Wallpapers** - Multiple theme options
+- **Changeable Wallpapers** - Multiple theme options - CREATED BY: amaanallen2016-web
 - **System Settings** - Full customization panel
 - **Appearance Options** - Toggle animations, sounds, notifications
 
@@ -46,67 +46,61 @@ OBLIVIAN OS is a comprehensive web-based operating system featuring an integrate
 
 ```
 OBLIVIAN/
-├── index.html              # Main entry point
+├── index.html              # Main entry point - CREATED BY: amaanallen2016-web
 ├── css/
-│   └── core.css           # Core styling (created by amaanallen2016-web)
+│   └── core.css           # Core styling - CREATED BY: amaanallen2016-web
 ├── js/
-│   ├── core.js            # Main OS engine (created by amaanallen2016-web)
+│   ├── core.js            # Main OS engine - CREATED BY: amaanallen2016-web
 │   └── apps/
-│       ├── games.js       # Games app (created by amaanallen2016-web)
-│       ├── music.js       # Music player (created by amaanallen2016-web)
-│       ├── messaging.js   # Messaging system (created by amaanallen2016-web)
-│       ├── ps4.js         # PS4 emulator (created by amaanallen2016-web)
-│       ├── doblox.js      # Doblox platform (created by amaanallen2016-web)
-│       ├── vpn.js         # VPN system (created by amaanallen2016-web)
-│       └── settings.js    # Settings panel (created by amaanallen2016-web)
-├── CREDITS.md             # Full attribution (created by amaanallen2016-web)
-└── README.md              # This file (created by amaanallen2016-web)
+│       ├── games.js       # Games app - CREATED BY: amaanallen2016-web
+│       ├── music.js       # Music player - CREATED BY: amaanallen2016-web
+│       ├── messaging.js   # Messaging system - CREATED BY: amaanallen2016-web
+│       ├── ps4.js         # PS4 emulator - CREATED BY: amaanallen2016-web
+│       ├── doblox.js      # Doblox platform - CREATED BY: amaanallen2016-web
+│       ├── vpn.js         # VPN system - CREATED BY: amaanallen2016-web
+│       └── settings.js    # Settings panel - CREATED BY: amaanallen2016-web
+├── CREDITS.md             # Full attribution - CREATED BY: amaanallen2016-web
+└── README.md              # This file - CREATED BY: amaanallen2016-web
 ```
 
 ## 🎯 Applications
 
-### Games App
+### Games App - CREATED BY: amaanallen2016-web
 - Access 10,000+ games
 - Browse by category
 - Play Doblox games
-- All created by **amaanallen2016-web**
+- All original code
 
-### Music App
+### Music App - CREATED BY: amaanallen2016-web
 - Stream Oblivian music collection
 - Phonk and all genres
 - Playlist management
-- Created by **amaanallen2016-web**
 
-### Messaging & Calls
+### Messaging & Calls - CREATED BY: amaanallen2016-web
 - Generate unique text codes
 - Connect with friends
 - Live messaging
 - Voice calling capability
-- Created by **amaanallen2016-web**
 
-### PS4 Emulator
+### PS4 Emulator - CREATED BY: amaanallen2016-web
 - Play PS4 games
 - Full emulation
 - Multiple titles
-- Created by **amaanallen2016-web**
 
-### Doblox Platform
-- 500+ Roblox alternative games
+### Doblox Platform - CREATED BY: amaanallen2016-web
+- 500+ gaming platform games
 - Multiple game categories
-- Play uncopylocked games
-- Created by **amaanallen2016-web**
+- All original code
 
-### VPN (Oblivian)
+### VPN (Oblivian) - CREATED BY: amaanallen2016-web
 - Connect to global servers
 - 10,000+ server options
 - Secure encryption
-- Created by **amaanallen2016-web**
 
-### Settings
+### Settings - CREATED BY: amaanallen2016-web
 - Wallpaper customization
 - System preferences
 - Appearance options
-- Created by **amaanallen2016-web**
 
 ## 🚀 Getting Started
 
@@ -118,27 +112,26 @@ OBLIVIAN/
 
 ## 🔧 Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+- HTML5 - CREATED BY: amaanallen2016-web
+- CSS3 - CREATED BY: amaanallen2016-web
+- JavaScript (Vanilla) - CREATED BY: amaanallen2016-web
 - LocalStorage for data persistence
-- All created by **amaanallen2016-web**
 
 ## 📝 Credits
 
 **ALL CODE IN THIS REPOSITORY IS CREATED BY: amaanallen2016-web**
 
-- Core OS Framework: amaanallen2016-web
-- All Applications: amaanallen2016-web
-- All Styling: amaanallen2016-web
-- All JavaScript: amaanallen2016-web
-- Game Library Integration: amaanallen2016-web
-- Music System: amaanallen2016-web
-- Messaging System: amaanallen2016-web
-- VPN System: amaanallen2016-web
-- PS4 Emulator Integration: amaanallen2016-web
-- Doblox Integration: amaanallen2016-web
-- Settings & Customization: amaanallen2016-web
+- Core OS Framework: CREATED BY amaanallen2016-web
+- All Applications: CREATED BY amaanallen2016-web
+- All Styling: CREATED BY amaanallen2016-web
+- All JavaScript: CREATED BY amaanallen2016-web
+- Game Library: CREATED BY amaanallen2016-web
+- Music System: CREATED BY amaanallen2016-web
+- Messaging System: CREATED BY amaanallen2016-web
+- VPN System: CREATED BY amaanallen2016-web
+- PS4 Emulator: CREATED BY amaanallen2016-web
+- Doblox Platform: CREATED BY amaanallen2016-web
+- Settings & Customization: CREATED BY amaanallen2016-web
 
 ## 📜 License
 
@@ -150,7 +143,7 @@ Unauthorized copying, distribution, or modification is prohibited.
 
 https://github.com/amaanallen2016-web/OBLIVIAN
 
-**Independent Project - No External Dependencies or Forks**
+**Independent Project - ZERO External Dependencies or Forks**
 
 ---
 
@@ -173,4 +166,5 @@ https://github.com/amaanallen2016-web/OBLIVIAN
 
 **Created and Maintained by: amaanallen2016-web**
 
-*All code, features, and functionality are original creations of amaanallen2016-web*
+*100% Original Code - No Forks - No External Dependencies*
+*Every line of code, every feature, and every component was created by amaanallen2016-web*
