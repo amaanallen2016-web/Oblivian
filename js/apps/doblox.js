@@ -1,12 +1,13 @@
 /* OBLIVIAN OS - Doblox (Roblox Alternative)
-   All code created by: amaanallen2016-web */
+   CREATED BY: amaanallen2016-web
+   ALL CODE BELONGS TO: amaanallen2016-web */
 
 const DobloxApp = {
     open: function() {
         const content = `
             <div>
                 <h2 style="color: #ff00ff;">🎯 Doblox</h2>
-                <p>Roblox Alternative - Based on: amaanallen2016-web Doblox-Uncopylocked-Games</p>
+                <p>Roblox Alternative - CREATED BY: amaanallen2016-web</p>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
                     <div class="doblox-game" onclick="DobloxApp.playGame('Adopt Me')">
@@ -46,7 +47,7 @@ const DobloxApp = {
                     </div>
                 </div>
                 
-                <p style="margin-top: 20px; font-size: 0.9em;">500+ Games Available - Created by: amaanallen2016-web</p>
+                <p style="margin-top: 20px; font-size: 0.9em;">500+ Games Available - Created by: amaanallen2016-web - ALL CODE ORIGINAL</p>
             </div>
         `;
         os.createWindow('🎯 Doblox', content, 700, 600);
